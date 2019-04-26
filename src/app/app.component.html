@@ -1,0 +1,35 @@
+
+<div class="container">
+  <div [hidden]="grid">
+    <H1>Hello welcome to {{title}}</H1>
+    <p>Enter your name to get started</p>
+    <input placeholder="Your name" [(ngModel)]="playerName" required>
+    <button (click)="login()" type="submit">Submit</button>
+
+  </div>
+
+  <div [hidden]="!grid">
+
+    <h1>New Game</h1>
+    <h2 [hidden]="!message">{{message}}</h2>
+    <h2>Players</h2>
+    <ul *ngFor="let name of names" class="center">
+      <li>{{name}}</li>
+    </ul>
+    <br/>
+    <table class="center">
+      <tr *ngFor="let arr of grid">
+        <td *ngFor="let el of arr">{{el}}</td>
+      </tr>
+    </table>
+    <div [hidden]="!inputInvalid">{{invalidMove}}</div>
+    <input type="number" placeholder="[1-9]" [(ngModel)]="currentMove" required>
+    <br/>
+    <button [disabled]="!active" (click)="submitMove()">GO!</button>
+
+  </div>
+</div>
+
+
+
+

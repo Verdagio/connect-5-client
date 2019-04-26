@@ -1,0 +1,17 @@
+.cvs{
+  width: 66%;
+  height: 66%;
+  background: royalblue;
+  border: 2px solid lightskyblue;
+}
+.container{
+  text-align: center;
+}
+.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+ul {
+  width: 10%;
+  margin: auto;
+}
